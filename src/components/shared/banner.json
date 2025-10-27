@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_shared_banners",
+  "info": {
+    "displayName": "banner"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "blocks",
+      "required": true
+    },
+    "button_primary_text": {
+      "type": "string",
+      "required": true
+    },
+    "button_primary_url": {
+      "type": "string",
+      "required": true
+    },
+    "button_secondary_text": {
+      "type": "string",
+      "required": true
+    },
+    "button_secondary_url": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  },
+  "config": {}
+}

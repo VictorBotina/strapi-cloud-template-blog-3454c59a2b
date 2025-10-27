@@ -1,0 +1,10 @@
+{
+  "collectionName": "components_shared_options",
+  "info": {
+    "displayName": "options",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {},
+  "config": {}
+}

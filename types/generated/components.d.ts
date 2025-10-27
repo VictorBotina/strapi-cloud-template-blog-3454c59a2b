@@ -1,5 +1,22 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SharedBanner extends Struct.ComponentSchema {
+  collectionName: 'components_shared_banners';
+  info: {
+    displayName: 'banner';
+  };
+  attributes: {
+    button_primary_text: Schema.Attribute.String & Schema.Attribute.Required;
+    button_primary_url: Schema.Attribute.String & Schema.Attribute.Required;
+    button_secondary_text: Schema.Attribute.String & Schema.Attribute.Required;
+    button_secondary_url: Schema.Attribute.String & Schema.Attribute.Required;
+    description: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images' | 'files', true> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -9,6 +26,15 @@ export interface SharedMedia extends Struct.ComponentSchema {
   attributes: {
     file: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
   };
+}
+
+export interface SharedOptions extends Struct.ComponentSchema {
+  collectionName: 'components_shared_options';
+  info: {
+    displayName: 'options';
+    icon: 'alien';
+  };
+  attributes: {};
 }
 
 export interface SharedQuote extends Struct.ComponentSchema {
@@ -65,7 +91,9 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'shared.banner': SharedBanner;
       'shared.media': SharedMedia;
+      'shared.options': SharedOptions;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
