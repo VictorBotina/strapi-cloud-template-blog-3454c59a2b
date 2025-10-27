@@ -11,7 +11,7 @@ export interface SharedBanner extends Struct.ComponentSchema {
     button_secondary_text: Schema.Attribute.String & Schema.Attribute.Required;
     button_secondary_url: Schema.Attribute.String & Schema.Attribute.Required;
     description: Schema.Attribute.Blocks & Schema.Attribute.Required;
-    image: Schema.Attribute.Media<'images' | 'files', true> &
+    image: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
