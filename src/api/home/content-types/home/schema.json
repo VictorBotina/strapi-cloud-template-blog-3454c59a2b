@@ -20,6 +20,11 @@
       "type": "component",
       "component": "shared.card-home",
       "repeatable": true
+    },
+    "feedback": {
+      "type": "component",
+      "component": "shared.feedback-card",
+      "repeatable": true
     }
   }
 }
