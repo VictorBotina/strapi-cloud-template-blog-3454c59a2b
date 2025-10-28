@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_shared_feedback_cards",
+  "info": {
+    "displayName": "feedback-card"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "enumeration",
+      "enum": [
+        "survey",
+        "pqrs"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "buttonText": {
+      "type": "string",
+      "required": true
+    },
+    "buttonLink": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

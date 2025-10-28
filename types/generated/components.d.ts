@@ -32,12 +32,17 @@ export interface SharedCardHome extends Struct.ComponentSchema {
   };
 }
 
-export interface SharedCardsHome extends Struct.ComponentSchema {
-  collectionName: 'components_shared_cards_homes';
+export interface SharedFeedbackCard extends Struct.ComponentSchema {
+  collectionName: 'components_shared_feedback_cards';
   info: {
-    displayName: 'Cards-home';
+    displayName: 'feedback-card';
   };
-  attributes: {};
+  attributes: {
+    buttonLink: Schema.Attribute.String & Schema.Attribute.Required;
+    buttonText: Schema.Attribute.String & Schema.Attribute.Required;
+    icon: Schema.Attribute.Enumeration<['survey', 'pqrs']>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
 }
 
 export interface SharedMedia extends Struct.ComponentSchema {
@@ -116,7 +121,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'shared.banner': SharedBanner;
       'shared.card-home': SharedCardHome;
-      'shared.cards-home': SharedCardsHome;
+      'shared.feedback-card': SharedFeedbackCard;
       'shared.media': SharedMedia;
       'shared.options': SharedOptions;
       'shared.quote': SharedQuote;
