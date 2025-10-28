@@ -15,6 +15,11 @@
       "type": "component",
       "component": "shared.banner",
       "repeatable": false
+    },
+    "cards": {
+      "type": "component",
+      "component": "shared.card-home",
+      "repeatable": true
     }
   }
 }

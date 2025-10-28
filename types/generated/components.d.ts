@@ -17,6 +17,29 @@ export interface SharedBanner extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedCardHome extends Struct.ComponentSchema {
+  collectionName: 'components_shared_card_homes';
+  info: {
+    displayName: 'Card-home';
+  };
+  attributes: {
+    buttonLink: Schema.Attribute.String;
+    buttonText: Schema.Attribute.String & Schema.Attribute.Required;
+    description: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    icon: Schema.Attribute.Enumeration<['sub', 'cont', 'prest']> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface SharedCardsHome extends Struct.ComponentSchema {
+  collectionName: 'components_shared_cards_homes';
+  info: {
+    displayName: 'Cards-home';
+  };
+  attributes: {};
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -92,6 +115,8 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'shared.banner': SharedBanner;
+      'shared.card-home': SharedCardHome;
+      'shared.cards-home': SharedCardsHome;
       'shared.media': SharedMedia;
       'shared.options': SharedOptions;
       'shared.quote': SharedQuote;

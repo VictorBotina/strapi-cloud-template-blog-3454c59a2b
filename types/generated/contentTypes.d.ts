@@ -607,6 +607,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
   };
   attributes: {
     banner: Schema.Attribute.Component<'shared.banner', false>;
+    cards: Schema.Attribute.Component<'shared.card-home', true>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

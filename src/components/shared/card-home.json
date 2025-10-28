@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_shared_card_homes",
+  "info": {
+    "displayName": "Card-home"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "blocks",
+      "required": true
+    },
+    "buttonText": {
+      "type": "string",
+      "required": true
+    },
+    "buttonLink": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "sub",
+        "cont",
+        "prest"
+      ]
+    }
+  },
+  "config": {}
+}
